@@ -1,7 +1,6 @@
 import '@hotwired/turbo-rails';
-import 'trix';
-import 'trix/dist/trix.css';
 import '@rails/actiontext';
+import 'trix';
 
 import.meta.globEager('../channels/**/*_channel.js');
 
