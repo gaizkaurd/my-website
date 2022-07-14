@@ -1,0 +1,16 @@
+<%= link_to repo.html_url do%>
+<div class="p-2 mt-3 flex gap-3 items-center bg-slate-300 dark:bg-gray-800 rounded-lg transform hover:translate-y-1 transition duration-300">
+    <div class="flex-auto">
+        <div class="flex truncate items-center">
+            <p class="bg-black font-bold rounded-l-full p-1 text-sm text-white"><%= repo.language %> / </p>
+            <p class="bg-pink-600 rounded-r-full p-1 text-sm text-white"><%= helpers.truncate(repo.name, 20) %></p>
+            <%= helpers.heroicon('external-link', variant: :solid, options: {class: 'h-4 ml-2'}) %>
+        </div>
+        <p class="text-sm text-left"><%= repo.description %></p>
+    </div>
+    <div class="flex items-center bg-amber-400 text-black rounded-lg p-1">
+        <p class="font-extrabold"><%= repo.stargazers_count %></p> 
+        <%= helpers.heroicon('star', variant: :solid, options: {class: 'h-4'})%>
+    </div>
+</div>
+<% end %>

@@ -8,10 +8,12 @@
 commit_time: Rails.configuration.x.git.commit_time %>
   </div>
   <div class="w-full sm:w-auto" data-controller="online-status">
-    <div class="flex items-end w-full sm:w-auto">
-      <a class="hover:underline" href="https://gaizkaurdangarin.es" rel="noopener noreferrer" target="_blank">
-          <title>Gaizka Urdangarin</title>
-          <span class="ml-1 font-mono">gaizkaurdangarin.es</span>
-      </a>
-    </div>
+    <span class="hidden px-1 py-px font-bold tracking-wide text-red-700 uppercase bg-white rounded" data-online-status-target="indicator">
+      You are offline
+    </span></div>
+  <div class="flex items-end w-full sm:w-auto">
+    <a class="hover:underline" href="https://gaizkaurdangarin.es" rel="noopener noreferrer" target="_blank">
+        <title>Gaizka Urdangarin</title>
+        <span class="ml-1 font-mono">gaizkaurdangarin.es</span>
+    </a></div>
 </footer>

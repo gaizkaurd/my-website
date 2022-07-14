@@ -1,33 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+ * Provides a drop-in pointer for the default Trix stylesheet that will format the toolbar and
+ * the trix-editor content (whether displayed or under editing). Feel free to incorporate this
+ * inclusion directly in any other asset bundle and remove this file.
+ *
+ *= require trix
+*/
 
-
-:root {
-  --color-primary: 105 0 0; /* dark red */
-  --color-secondary: 211 0 1; /* light red */
-  --color-tertiary: 240 231 233; /* rose */
-  --color-accent: 21 209 216; /* cyan */
-}
-
-.gradient__primary {
-  stop-color: rgb(var(--color-primary));
-}
-
-.gradient__secondary {
-  stop-color: rgb(var(--color-secondary));
-}
-
-.gradient__accent {
-  stop-color: rgb(var(--color-accent));
-}
-
-.text-mono {
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
-}
-
-/* TRIX */
-
+/*
+ * We need to override trix.css’s image gallery styles to accommodate the
+ * <action-text-attachment> element we wrap around attachments. Otherwise,
+ * images in galleries will be squished by the max-width: 33%; rule.
+*/
 .trix-content .attachment-gallery > action-text-attachment,
 .trix-content .attachment-gallery > .attachment {
   flex: 1 0 33%;
@@ -46,4 +29,3 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
-

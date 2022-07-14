@@ -3,6 +3,7 @@ class GitVersion::Component < ViewComponent::Base
     super
     @commit_version = commit_version
     @commit_time = commit_time
+    super
   end
 
   attr_reader :commit_version, :commit_time

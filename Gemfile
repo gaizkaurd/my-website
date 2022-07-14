@@ -3,6 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+# Image process
+gem 'image_processing'
+
+# Github api wrapper
+gem 'github_api'
+
+# Redcarpet for markdown paser
+gem 'redcarpet'
+
 # Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 7.0.3'
 
