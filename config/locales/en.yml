@@ -30,4 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: 'Hello world'
+  my_repositories: 'My repositories'
+  last_activity: 'Last activity'
+  home: 'Home'
+  about: 'About'
+  contact: 'Contact'
+  my_projects: 'My projects'
+  description: 'Description'
+  information: 'Information'
+  minute: 'minute'
+  read: 'read'
+  see_more: 'See more'
+  error: 'Error'
