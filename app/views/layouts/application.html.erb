@@ -16,7 +16,6 @@
     <%= tag.meta content: Rails.configuration.x.git.commit_time, name: 'git-commit-time' %>
     <%= tag.meta name: 'app-host', content: Rails.configuration.x.app_host %>
     <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
     <%= tag.link href: asset_path('/apple-touch-icon.png'), rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180' %>
     <%= tag.link href: asset_path('/favicon-32x32.png'),    rel: 'icon',             type: 'image/png', sizes: '32x32' %>
     <%= tag.link href: asset_path('/favicon-16x16.png'),    rel: 'icon',             type: 'image/png', sizes: '16x16' %>
