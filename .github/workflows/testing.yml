@@ -9,26 +9,6 @@ jobs:
   test:
     runs-on: ubuntu-20.04
 
-    services:
-      postgres:
-        image: postgres:14-alpine
-        ports: ['5432:5432']
-        env:
-          POSTGRES_PASSWORD: postgres
-
-      redis:
-        image: redis:alpine
-        ports: ['6379:6379']
-
-    env:
-      DB_HOST: localhost
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      REDIS_URL: redis://localhost:6379/0
-      RAILS_ENV: test
-      DISABLE_SPRING: true
-      CI: true
-
     steps:
       - uses: actions/checkout@v3
 
@@ -50,9 +30,6 @@ jobs:
 
       - name: Run ESLint
         run: bin/yarn lint
-
-      - name: Setup PostgreSQL
-        run: bin/rails db:create
 
       - name: Compile assets
         run: bin/rails assets:precompile
