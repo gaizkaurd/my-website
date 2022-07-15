@@ -1,0 +1,9 @@
+{
+    "name": "Prueba",
+    "description": "Esto es una prueba",
+    "repository": "https://github.com/gaizkaurd/my-website",
+    "author": "gaizkaurd",
+    "license": "MIT",
+    "start-time": "2020-01-01T00:00:00Z",
+    "end-time": "2020-01-01T00:00:00Z"
+}
