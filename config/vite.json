@@ -6,7 +6,7 @@
   "development": {
     "autoBuild": true,
     "publicOutputDir": "vite-dev",
-    "host": "vite.gaizka-template-rails.test",
+    "host": "vite.gaizka-web.test",
     "port": 3036
   },
   "test": {

@@ -19,7 +19,7 @@ export default defineConfig({
   },
   server: {
     hmr: {
-      host: 'vite.gaizka-template-rails.test',
+      host: 'vite.gaizka-web.test',
       clientPort: 443,
     },
   },

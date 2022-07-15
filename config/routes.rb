@@ -1,6 +1,7 @@
 require 'lockup'
 
 Rails.application.routes.draw do
+  resources :proyects
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   mount Lockup::Engine, at: '/lockup' if Rails.env.production?

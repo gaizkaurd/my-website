@@ -42,3 +42,6 @@ en:
   read: 'read'
   see_more: 'See more'
   error: 'Error'
+  proyect_created_success: 'Proyect was successfully created.'
+  proyect_updated_success: 'Proyect was successfully updated.'
+  proyect_destroyed_success: 'Proyect was successfully destroyed.'
