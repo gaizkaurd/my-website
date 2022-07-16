@@ -7,7 +7,7 @@ on:
 
 env:
   AR_LOCATION: eu
-  REGION: europe-west3
+  REGION: europe-central1
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
