@@ -1,0 +1,9 @@
+{
+    "name": "Cloudflare Record Update",
+    "description": "As I had my own rack servers at my house, paying for the static IP was too expensive, so I built my own record update with Cloudflare API",
+    "repository": "https://github.com/gaizkaurd/my-website",
+    "author": "gaizkaurd",
+    "license": "MIT",
+    "start-time": "2018-05-05",
+    "end-time": "2018-05-05"
+}

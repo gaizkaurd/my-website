@@ -1,7 +1,7 @@
 require 'project'
 
 
-Rails.application.config.x.projects = Set.new
+Rails.application.config.x.projects = []
 
 Dir.entries(Rails.root.join('projects')).each_with_index do |file, n|
     if file != '.' && file != '..'

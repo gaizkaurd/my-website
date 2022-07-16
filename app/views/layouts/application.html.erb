@@ -2,7 +2,7 @@
 <html lang="<%= I18n.locale %>">
   <head>
     <%= tag.meta charset: 'utf-8' %>
-    <%= tag.title 'Gaizka Urdangarin Template' %>
+    <%= tag.title 'Gaizka Urdangarin' %>
     <%= tag.meta content: 'GaizkaU', name: 'description' %>
     <%= tag.meta content: 'width=device-width,initial-scale=1', name: 'viewport' %>
     <%= tag.meta content: 'yes', name: 'mobile-web-app-capable' %>
@@ -16,6 +16,7 @@
     <%= tag.meta content: Rails.configuration.x.git.commit_time, name: 'git-commit-time' %>
     <%= tag.meta name: 'app-host', content: Rails.configuration.x.app_host %>
     <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
     <%= tag.link href: asset_path('/apple-touch-icon.png'), rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180' %>
     <%= tag.link href: asset_path('/favicon-32x32.png'),    rel: 'icon',             type: 'image/png', sizes: '32x32' %>
     <%= tag.link href: asset_path('/favicon-16x16.png'),    rel: 'icon',             type: 'image/png', sizes: '16x16' %>

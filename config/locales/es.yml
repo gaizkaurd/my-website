@@ -11,6 +11,4 @@ es:
   read: 'de lectura'
   see_more: 'Ver más'
   error: 'Error'
-  proyect_created_success: 'El proyecto se ha creado.'
-  proyect_updated_success: 'El proyecto se ha actualizado.'
-  proyect_destroyed_success: 'El proyecto se ha eliminado.'
+  coming_soon: 'Próximamente'

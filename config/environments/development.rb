@@ -50,6 +50,12 @@ Rails.application.configure do
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
 
+  # Raise an error on page load if there are pending migrations.
+  config.active_record.migration_error = :page_load
+
+  # Highlight code that triggered database queries in logs.
+  config.active_record.verbose_query_logs = true
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
@@ -85,4 +91,6 @@ Rails.application.configure do
     'component_previews',
   )
 
+  # Enable load_async
+  config.active_record.async_query_executor = :global_thread_pool
 end

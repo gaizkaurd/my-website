@@ -1,7 +1,7 @@
-<div class="w-80 bg-slate-300 dark:bg-slate-800 rounded-lg p-6 relative" id="card_<%= dom_id proyect %>">
+<div class="w-80 bg-slate-300 dark:bg-slate-800 rounded-lg p-6 relative">
   <p class="font-bold mt-2 sm:mt-0"><%= proyect.name %></p>
   <div class="absolute top-0 right-0 p-3">
-    <time class="truncate "data-controller="timeago" datetime="<%= proyect.fecha_inicio %>">
+    <time class="truncate "data-controller="timeago" datetime="<%= proyect.start_time %>">
     </time>
   </div>
   <div class="relative flex py-1 items-center">
@@ -10,7 +10,7 @@
     <div class="flex-grow border-t border-gray-400"></div>
   </div>
   <div>
-    <p><%= helpers.truncate(proyect.descripcion, 100) %></p>
+    <p><%= helpers.truncate(proyect.short_description, 100) %></p>
   </div>
   <div class="relative flex py-1 items-center">
     <div class="flex-grow border-t border-gray-400"></div>
@@ -22,6 +22,6 @@
     <p><%= pluralize(proyect.time_to_read, t('minute')) %> <%= t('read') %></p>
   </div>
   <div class="mt-4 transform hover:-translate-y-1 transition duration-200">
-    <%= link_to t('see_more'), proyect, class: "p-2 text-white font-bold bg-pink-600 rounded-lg ", data: {"turbo-frame": "_top"} %>
+    <%= link_to t('coming_soon'), nil, class: "p-2 text-black font-bold bg-gray-200 rounded-lg ", data: {"turbo-frame": "_top"} %>
   </div>
 </div>

@@ -92,4 +92,9 @@ Rails.application.configure do
     end
   end
 
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+
+  # Enable load_async
+  config.active_record.async_query_executor = :global_thread_pool
 end

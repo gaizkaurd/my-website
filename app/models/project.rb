@@ -1,6 +1,7 @@
 class Project
 
-    attr_accessor :name, :description, :author, :repository, :copyright, :start_time, :end_time, :id
+    attr_accessor :name, :description, :short_description, :author, :repository, :copyright, :start_time, :end_time, 
+:time_to_read, :id
 
     def initialize(path, id)
         load_files!(path)
@@ -18,6 +19,7 @@ class Project
     end
 
     def parse_description!(raw_description)
+        @time_to_read = raw_description.split.length
         renderer = Redcarpet::Render::HTML
         markdown = Redcarpet::Markdown.new(renderer)
         @description = markdown.render(raw_description)
@@ -27,10 +29,11 @@ class Project
         json_data = JSON.parse(raw_json)
         @name = json_data['name']
         @author = json_data['author']
+        @short_description = json_data['description']
         @repository = json_data['repository']
         @copyright = json_data['copyright']
-        @start_time = json_data['start_time']
-        @end_time = json_data['end_time']
+        @start_time = json_data['start-time']
+        @end_time = json_data['end-time']
     end
     
 end

@@ -1,4 +1,4 @@
-class ProyectCard::Component < ViewComponent::Base
+class ProjectCard::Component < ViewComponent::Base
 
   with_collection_parameter :proyect
 

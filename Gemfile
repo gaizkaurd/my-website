@@ -3,9 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
-# Database
-gem 'sqlite3'
-
 # Image process
 gem 'image_processing'
 
@@ -33,6 +30,9 @@ gem 'view_component'
 # Rails View Helpers for Heroicons. (https://github.com/bharget/heroicon)
 gem 'heroicon'
 
+# Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
+gem 'pg', '~> 1.1'
+
 # Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
 gem 'puma', '~> 5.0'
 
@@ -41,6 +41,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+# A Ruby client library for Redis (https://github.com/redis/redis-rb)
+gem 'redis'
 
 # Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
 gem 'lograge'
@@ -53,6 +56,9 @@ gem 'rack-canonical-host'
 
 # Brotli compression for Rack responses (http://github.com/marcotc/rack-brotli/)
 gem 'rack-brotli'
+
+# Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
+gem 'lockup'
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
@@ -123,4 +129,9 @@ group :test do
 
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
   gem 'capybara'
+end
+
+group :production do
+  # Error reports you can be happy about. (https://github.com/honeybadger-io/honeybadger-ruby)
+  gem 'honeybadger'
 end
