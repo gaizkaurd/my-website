@@ -1,4 +1,4 @@
-<div class="p-1 md:p-3 flex gap-3 items-center <%= 'bg-slate-300 dark:bg-gray-400' if activity_iteration.index.odd? %>">
+<div class="p-1 md:p-3 flex flex-wrap gap-3 items-center <%= 'bg-slate-300 dark:bg-gray-400' if activity_iteration.index.odd? %>">
     <div class="flex-auto">
         <div class="flex">
             <p class="w-16 bg-gray-900 font-bold rounded-l-full p-1 text-sm text-white"><%= activity.type.chomp('Event') %></p>
@@ -6,7 +6,7 @@
         </div>
     </div>
     <div>
-        <time class="truncate "data-controller="timeago" datetime="<%= activity.created_at %>">
+        <time data-controller="timeago" datetime="<%= activity.created_at %>">
             <%= activity.created_at %>
         </time>
     </div>

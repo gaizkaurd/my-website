@@ -5,7 +5,7 @@
   <%= render Readme::Component.new username: Rails.application.config.x.github.username , readme_html: Rails.application.config.x.github.readme %>
 </div>
 <div class="text-center mt-4 flex flex-row flex-wrap place-content-center gap-5">
-  <div class="flex-auto bg-slate-50 dark:bg-gray-600 rounded-lg p-4 transform hover:translate-y-1 transition duration-300">
+  <div class="flex-auto bg-slate-50 dark:bg-gray-600 rounded-lg p-2 transform hover:translate-y-1 transition duration-300">
     <h2 class="dark:text-white text-3xl font-semibold"><%= t('my_repositories') %></h2>
     <% if !Rails.application.config.x.github.repositories.is_a? String %>
       <%= render Repository::Component.with_collection(Rails.application.config.x.github.repositories) %>
