@@ -3,7 +3,7 @@
 </div>
 <div class="flex flex-wrap w-full gap-4 place-content-center">
   <div class="w-fit">
-    <%= vite_image_tag 'images/me.webp', class:"rounded-full shadow-lg border-2 sm:max-w-xs" %>
+    <%= vite_image_tag 'images/me.webp', class:"rounded-full shadow-lg border-2 sm:max-w-xs", alt: "Gaizka Urdangarin" %>
   </div>
   <div class="w-full md:w-3/5">
   <%= render Readme::Component.new username: Rails.application.config.x.github.username , readme_html: Rails.application.config.x.github.about_me, file: "ABOUTME" %>
