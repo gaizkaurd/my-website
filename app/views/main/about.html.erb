@@ -1,11 +1,11 @@
 <div class="flex flex-col sm:flex-row sm:items-center mb-8">
   <%= tag.h1 t('about') , class: "dark:text-white uppercase tracking-wider font-semibold flex-auto" %>
 </div>
-<div class="flex flex-wrap-reverse w-full gap-4">
-  <div class="flex-auto">
-  <%= render Readme::Component.new username: Rails.application.config.x.github.username , readme_html: Rails.application.config.x.github.about_me, file: "ABOUTME" %>
+<div class="flex flex-wrap w-full gap-4 place-content-center">
+  <div class="w-fit">
+    <%= vite_image_tag 'images/me.webp', class:"rounded-full shadow-lg border-2 sm:max-w-xs" %>
   </div>
-  <div>
-    <img alt="Gaizka Urdangarin" loading="lazy" height="100%" width="100%" class="rounded-full shadow-lg border-2" src="https://avatars.githubusercontent.com/u/24901613?v=4">
+  <div class="w-full md:w-3/5">
+  <%= render Readme::Component.new username: Rails.application.config.x.github.username , readme_html: Rails.application.config.x.github.about_me, file: "ABOUTME" %>
   </div>
 </div>

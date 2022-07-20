@@ -132,7 +132,7 @@ jobs:
       - name: Build the image
         run: |
           export COMMIT_TIME=$(git show -s --format=%cI ${GITHUB_SHA})
-          export COMMIT_VERSION=$(git describe --always)
+          export COMMIT_VERSION=$(git describe --tag)
           echo $GITHUB_SHA
           echo $COMMIT_TIME
           echo $COMMIT_VERSION
