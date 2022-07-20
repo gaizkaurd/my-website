@@ -3,7 +3,7 @@ require 'json'
 
 class GithubProfileInfo
 
-  attr_reader :readme, :repositories, :activity, :updated_at, :username
+  attr_reader :readme, :repositories, :activity, :updated_at, :username, :languages, :about_me
 
   def initialize(username)
     @username = username
@@ -14,6 +14,7 @@ class GithubProfileInfo
     fetch_repositories
     fetch_activity
     fetch_readme
+    fetch_aboutme
     @updated_at = Time.zone.today
   end
 
@@ -31,18 +32,27 @@ class GithubProfileInfo
         @readme = 'Error' if @readme.nil?
         return
     end
-    parse_response(response)
+    @readme = parse_response(response)
   end
 
+  def fetch_aboutme
+    begin
+    response = Faraday.get("https://raw.githubusercontent.com/#{@username}/#{@username}/main/ABOUT.MD")
+    rescue StandardError
+        @about_me = 'Error' if @about_me.nil?
+        return
+    end
+    @about_me = parse_response(response)
+  end
 
   def parse_response(response)
     if response.status == 200
         renderer = Redcarpet::Render::HTML
         markdown = Redcarpet::Markdown.new(renderer)
-        @readme = markdown.render(response.body.to_s)
-    elsif @readme.nil?
-        @readme = 'Error'
-end
+        markdown.render(response.body.to_s)
+    else
+      'Error'
+    end
   end
 
 

@@ -4,4 +4,7 @@ class MainController < ApplicationController
         @projects = ProjectService.all
     end
 
+    def about
+    end
+
 end

@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   end
 
   get '/manifest.v1.webmanifest', to: 'statics#manifest', as: :webmanifest
+  get '/about', to: 'main#about', as: :about
 
   root to: 'main#index'
-
 
 end

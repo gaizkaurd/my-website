@@ -35,14 +35,10 @@ module GaizkaWeb
     config.x.app_host = ENV.fetch('APP_HOST', 'gaizka-web.gaizkaurdangarin.es')
 
     config.x.git.commit_version =
-      ENV.fetch('COMMIT_VERSION') { `git describe --always`.chomp }
+      ENV.fetch('COMMIT_VERSION') { `git describe --tags`.chomp }
 
     config.x.git.commit_time =
       ENV.fetch('COMMIT_TIME') { `git show -s --format=%cI`.chomp }
-
-    config.x.honeybadger.api_key = ENV['HONEYBADGER_API_KEY'].presence
-
-    config.x.plausible_url = ENV.fetch('PLAUSIBLE_URL', nil)
 
     config.x.cypress =
       (Rails.env.development? || Rails.env.test?) &&

@@ -32,6 +32,7 @@
       <%= render Navigation::Component.new do |nav| %>
         <% nav.nav_links [
           { name: t('home'), href: root_path }, \
+          { name: t('about'), href: about_path}, \
           { name: t('contact'), href: 'mailto:gaizkaurdangarin@gmail.com' }
         ]%>
       <% end %>
